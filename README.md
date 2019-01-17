@@ -51,13 +51,13 @@ https://www.bionicspirit.com/blog/2012/01/16/cosine-similarity-euclidean-distanc
       1 => string 'Web' (length=3)
       2 => string 'API' (length=3)
     Data Mining: Finding Similar Items
-    score: 0
+    score: 0
     
     Blogging Platform for Hackers
-    score: 0.23570226039552
+    score: 0.23570226039552
     
     UX Tip: Don't Hurt Me On Sign-Up
-    score: 0.33333333333333
+    score: 0.33333333333333
     
     Crawling the Android Marketplace
-    score: 0.51639777949432
+    score: 0.51639777949432
