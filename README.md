@@ -3,7 +3,6 @@ php-cosine-similarity
 
 measures a cosine similarity between two vectors
 
-https://www.bionicspirit.com/blog/2012/01/16/cosine-similarity-euclidean-distance.html
 
     compare
     array (size=4)
