@@ -20,19 +20,19 @@ $articles = array(
 	)
 );
 
-$tags = Similarity::tags_to_point($articles);
+$dot = Similarity::dot(call_user_func_array("array_merge", array_column($articles, "tags")));
 
 $target = array('Publishing', 'Web', 'API');
-echo 'compare';
-var_dump($articles);
-var_dump($target);
+echo "compare two one-hot encoding vector\n";
+echo "example articles:\n";
+print_r($articles);
+echo "target article:\n";
+print_r($target);
 
-$compare = array_fill_keys($target, 1) + $tags;
 foreach($articles as $article) {
-	$ak = array_fill_keys($article['tags'], 1) + $tags;
-	echo $article['article'];
-	echo '<br />';
-	echo "score: ";
-	echo Similarity::cosine($compare, $ak);
-	echo '<br />';echo '<br />';
+	$score[$article['article']] = Similarity::cosine($target, $article['tags'], $dot);
 }
+asort($score);
+
+echo "Sorted result similarity:\n";
+print_r($score);

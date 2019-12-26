@@ -1,12 +1,7 @@
 <?php
 class Similarity {
-	static public function tags_to_point($articles) {
-		$tags = array();
-		foreach($articles as $article) {
-			$tags = array_merge($tags, $article['tags']);
-		}
+	static public function dot($tags) {
 		$tags = array_unique($tags);
-		
 		$tags = array_fill_keys($tags, 0);
 		ksort($tags);
 		return $tags;
@@ -27,7 +22,9 @@ class Similarity {
 			return $a + $b;
 		}));
 	}
-	static public function cosine($a, $b) {
+	static public function cosine($a, $b, $base) {
+    $a = array_fill_keys($a, 1) + $base;
+    $b = array_fill_keys($b, 1) + $base;
 		ksort($a);
 		ksort($b);
 		return self::dot_product($a, $b) / (self::magnitude($a) * self::magnitude($b)); 
