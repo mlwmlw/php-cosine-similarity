@@ -4,12 +4,13 @@ php-cosine-similarity
 measures a cosine similarity between two one-hot encoding vectors
 
 
-Demo 
-    $dot = Similarity::tags_to_point(["a", "b", "c", "d"]);
-	  $score = Similarity::cosine(["a", "b"], ["b", "c"], $dot);
+Demo code
+```php
+$dot = Similarity::tags_to_point(["a", "b", "c", "d"]);
+$score = Similarity::cosine(["a", "b"], ["b", "c"], $dot);
+``` 
     
-    
-    example articles:
+    Example articles:
     Array
     (
         [0] => Array
@@ -68,13 +69,15 @@ Demo
             )
 
     )
-    target article:
+    
+    Target article:
     Array
     (
         [0] => Publishing
         [1] => Web
         [2] => API
     )
+    
     Sorted result similarity:
     Array
     (
