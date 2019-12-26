@@ -6,7 +6,7 @@ measures a cosine similarity between two one-hot encoding vectors
 
 Demo code
 ```php
-$dot = Similarity::tags_to_point(["a", "b", "c", "d"]);
+$dot = Similarity::dot(["a", "b", "c", "d"]);
 $score = Similarity::cosine(["a", "b"], ["b", "c"], $dot);
 ``` 
     
